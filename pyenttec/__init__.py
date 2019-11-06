@@ -199,7 +199,7 @@ class DMXConnection(object):
     def render(self):
         """Write the current DMX frame to the port."""
 
-        self.com.write(self._packet_start + self.dmx_frame.tostring() + _PACKET_END)
+        self.com.write(self._packet_start + self.dmx_frame.tobytes() + _PACKET_END)
 
     def set_channel(self, chan, val):
         """Set the value of a DMX channel, indexed from 0.

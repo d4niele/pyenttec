@@ -188,7 +188,7 @@ class DMXConnection(object):
                         (univ_size + 1) & 0xFF,
                         ( (univ_size + 1) >> 8) & 0xFF,
                         0)
-        self._packet_start = array('B', packet_start).tostring()
+        self._packet_start = array('B', packet_start).tobytes()
 
         self._write_settings()
 

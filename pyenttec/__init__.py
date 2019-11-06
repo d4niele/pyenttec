@@ -19,8 +19,8 @@ _MAX_DMX_SIZE = 512
 
 _PACKET_END = struct.pack('>B', _END_VAL)
 
-_port_directory = {'darwin': "/dev/",'linux2':'/dev/'}
-_port_basenames = {'darwin': ["tty.usbserial"],'linux2':["ttyUSB",]}
+_port_directory = {'darwin': "/dev/",'linux':'/dev/','linux2':'/dev/'}
+_port_basenames = {'darwin': ["tty.usbserial"],'linux2':["ttyUSB",],'linux':["ttyUSB",]}
 
 def _item_is_port(item, platform):
     basenames = _port_basenames[platform]

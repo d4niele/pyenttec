@@ -113,7 +113,7 @@ class EnttecProParams(object):
                   length & 0xFF,
                   (length >> 8) & 0xFF)
         packet = header + payload
-        return array('B', packet).tostring() + _PACKET_END
+        return array('B', packet).tobytes() + _PACKET_END
 
 
 class DMXConnection(object):
